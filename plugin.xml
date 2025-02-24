@@ -48,6 +48,12 @@
         <config-file target="*-Info.plist" parent="NSPhotoLibraryAddUsageDescription">
             <string>This app requires access to the photo library to save processed videos.</string>
         </config-file>
+        <config-file target="*-Info.plist" parent="UIFileSharingEnabled">
+            <true/>
+        </config-file>
+        <config-file target="*-Info.plist" parent="LSSupportsOpeningDocumentsInPlace">
+            <true/>
+        </config-file>
 
         <header-file src="src/ios/VideoEditor.h" />
         <source-file src="src/ios/VideoEditor.m" />
