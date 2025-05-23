@@ -37,10 +37,22 @@
 
     <!-- ios -->
     <platform name="ios">
-        <config-file target="config.xml" parent="/*">
+         <config-file target="config.xml" parent="/*">
             <feature name="VideoEditor">
                 <param name="ios-package" value="VideoEditor"/>
             </feature>
+        </config-file>
+        <config-file target="*-Info.plist" parent="NSPhotoLibraryUsageDescription">
+            <string>This app requires access to the photo library to save and process videos.</string>
+        </config-file>
+        <config-file target="*-Info.plist" parent="NSPhotoLibraryAddUsageDescription">
+            <string>This app requires access to the photo library to save processed videos.</string>
+        </config-file>
+        <config-file target="*-Info.plist" parent="UIFileSharingEnabled">
+            <true/>
+        </config-file>
+        <config-file target="*-Info.plist" parent="LSSupportsOpeningDocumentsInPlace">
+            <true/>
         </config-file>
 
         <header-file src="src/ios/VideoEditor.h" />
